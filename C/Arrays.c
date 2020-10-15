@@ -67,7 +67,7 @@ int main(){
 
 //----------------Sorting Arrays------------//
 
-#if 1
+#if 0
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -108,6 +108,86 @@ int main(){
     for(i=0;i<n;i++){
         printf("%d \n",goals[i]);
     }
+    return 0;
+}
+
+#endif
+
+
+//----------------Arrays and Pointers------------//
+
+#if 0
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+#include <math.h>
+
+int main(){
+
+    int i;
+    int arr[5] = {56,45,32,75,89};
+
+    printf("Element \t memAdd \t \t Value \n");
+
+    for(i=0;i<5;i++){
+        printf("arr[%d] \t %p \t %d \n",i,&arr[i],arr[i]);
+    }
+
+    printf("\n arr \t\t\t\t %p \n",arr); // arr name is pointer to the first element
+
+    printf("\n *arr \t\t\t\t %d \n",*arr);
+    printf("\n *(arr+2) \t\t\t\t %d \n",*(arr+2)); 
+
+    return 0;
+}
+
+#endif
+
+//----------------Strings and Pointers------------//
+
+#if 0
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+#include <math.h>
+
+int main(){
+
+    char movie[] = "The Return of DISCO FIGHTER!";
+    char *mp = "Deepak is the FLASH!";
+
+    puts(mp);
+    
+    mp = "New Movie title";
+
+    puts(mp);
+
+    return 0;
+}
+
+#endif
+
+
+//----------------Arrays and Pointers------------//
+
+#if 1
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+#include <math.h>
+
+int main(){
+
+    char movie[20];
+    char *mp = movie;
+
+    fgets(mp,20,stdin); // gets input form std input
+
+    puts(mp);
+
     return 0;
 }
 
