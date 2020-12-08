@@ -52,8 +52,6 @@ void PrintList(DoublyLinkedList *head){
         head = head->next;
     }
 }
-
-
 int main(){
     InsertFirst(54);
     InsertFirst(98);
