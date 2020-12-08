@@ -112,4 +112,22 @@ void main() {
 	
    printf("\nList after deleting all items: ");
    printList();   
+
+
+    /* just checking Endianess of the system */
+   unsigned int x = 0x76543210;
+   char *c = (char*) &x;
+   printf ("*c is: 0x%x\n", *c);
+   if (*c == 0x10){
+       printf ("Underlying architecture is little endian. \n");
+       }else{
+        printf ("Underlying architecture is big endian. \n");
+           }
+
+
+           int num = 1;
+ if(*(char*)&num == 1)
+    printf("Little Endian\n");
+ else
+    printf("Big Endian\n");
 }
