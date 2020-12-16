@@ -2,6 +2,9 @@
 
 
 
+
+int *p = (unsigned int*)0x8000;
+
 void bubbleSort(int *arr, int arrSize){
 
     for(int i = 0;i<arrSize;i++)
@@ -115,15 +118,28 @@ int BinarySearch(int *arr, int arrSize, int x){
 
 int main(){
 
-    int myArr[10] = {13,18,27,56,9,24,90,16,63,71};
+    // int myArr[10] = {13,18,27,56,9,24,90,16,63,71};
 
-    PrintArray(myArr,10);
-    printf("\n");
-    MergeSort(myArr, 0,9);
-    PrintArray(myArr,10);
+    // PrintArray(myArr,10);
+    // printf("\n");
+    // MergeSort(myArr, 0,9);
+    // PrintArray(myArr,10);
 
     // int ans = BinarySearch(myArr,10, 16);
     // printf("%d ",ans);
+
+    // printf(" %d ",a);
+    // printf(" %p ",&a);
+    // printf(" %p ",(p+8));
+    //  printf(" %d ",*p);
+
+    int a = 3;
+    int b = 2;
+    b = a++;
+
+    printf("%d",++b);
+    
+
 
 
     return 0 ;
