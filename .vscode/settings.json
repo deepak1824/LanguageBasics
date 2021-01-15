@@ -5,6 +5,7 @@
         "string_view": "c",
         "ostream": "c",
         "sstream": "c",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "algorithm": "c"
     }
 }
