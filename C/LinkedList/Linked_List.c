@@ -23,7 +23,7 @@ void printList(LinkedList *head){
         printf("%d-> ",ptr->data);
         ptr = ptr->next;
     }
-    printf("NULL");
+    printf("NULL\n");
 }
 
 /*push method to Takes a list and a data value and creates a new link with the given data
@@ -48,7 +48,34 @@ void Append(LinkedList **head, int data){
     }
 }
 
+void deleteList(LinkedList **head){
 
+    LinkedList *prev = *head;
+
+    while(*head){
+        *head = (*head)->next;
+        printf("Deleting %d\n",prev->data);
+        free(prev);
+        prev = *head;
+    }
+}
+
+//Takes a non-empty list and removes the front node, and returns the data which was in that node.
+int Pop(LinkedList **head){
+    
+    if(*head == NULL){
+        return -1;
+    }
+    
+    LinkedList *headRef = *head;
+    int res = headRef->data;
+    (*head) = (*head)->next;
+
+    free(head);
+
+    return res;
+
+}
 
 int main(){
 
@@ -56,11 +83,13 @@ int main(){
     int n = sizeof(arr)/sizeof(arr[0]);
 
     LinkedList *head =  NULL;
-    for(int i=n-1;i>=0;i--){
+    for(int i=0;i<n;i++){
         Append(&head,arr[i]);
     }
 
     printList(head);
+    
+
 
     return 0;
 }
